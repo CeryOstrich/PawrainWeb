@@ -1,0 +1,571 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+    body {
+        background-image: url(./img/bg2.jpg);
+    }
+
+/* Header Styles */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4e5c55;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+nav .logo h1 {
+    color: white;
+    font-family: 'eagle lake';
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'eagle lake';
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-btn .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Untuk tampilan mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+}
+
+
+
+/* hero */
+/* Hero Section Styles */
+#hero {
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff8e7; /* Light pastel text */
+}
+
+/* Background Image */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the image behind the content */
+    overflow: hidden;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    filter: brightness(70%); /* Darken the image for better text readability */
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative; /* Position relative to contain text above the image */
+    z-index: 2; /* Ensure the text is above the background image */
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-family: Poppins; /* Elegant serif font */
+    font-weight: bold;
+    color: #fff8e7; /* Pastel cream text */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-family: eagle lake;
+    font-size: 1.25rem;
+    color: #fff8e7; /* Same pastel cream for contrast */
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Call-to-Action Button */
+.hero-content .cta {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff8e7; /* Light pastel text */
+    background-color: #7c623f; /* Warm brown background */
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-content .cta:hover {
+    background-color: #a47d3c; /* Darker brown on hover */
+    color: #fff; /* White text on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* hero end */
+
+/* About Section Styles */
+#about {
+    height: 100vh;
+    width: 100vw;
+    color: #7c623f; /* Warm brown text */
+    padding: 80px 20px; /* Add padding for spacing */
+    text-align: center;
+}
+
+#about .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Title Styling */
+#about h2 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    font-weight: bold;
+    color: #7c623f; /* Warm brown text */
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Paragraph Styling */
+#about p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #3f3a36; /* Slightly darker text for better contrast */
+    margin-bottom: 40px;
+}
+
+/* Image Styling */
+#about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 4px solid #7c623f; /* Add warm brown border */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for aesthetics */
+    object-fit: cover; /* Ensures the image is properly cropped */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Hover Effect */
+#about img:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow on hover */
+}
+
+/* About end */
+
+/* Aesthetic CSS for Portfolio Section */
+/* Moving Gallery Styling */
+
+.container_porto h2 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.container_porto {
+    overflow: hidden; /* Hide overflowing images */
+    width: 100%; /* Full width */
+    height: 100vh;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.portfolio-gallery {
+    height: 400px;
+    display: flex; /* Align images in a row */
+    gap: 20px; /* Space between images */
+    animation: scroll-seamless 20s linear infinite; /* Seamless scrolling */
+    animation-play-state: running; /* Default: running */
+    transition: animation-play-state 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Stop Scrolling When Hovering Over Gallery */
+.container_porto:hover .portfolio-gallery {
+    animation-play-state: paused; /* Pause the scrolling animation */
+}
+
+.portfolio-item img {
+    width: 200px; /* Adjust based on your desired image size */
+    height: 100%; /* Maintain height consistency */
+    object-fit: cover; /* Ensure the image is cropped properly */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetics */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth animation */
+    filter: grayscale(100%); /* Make all images black & white by default */
+}
+
+/* Hover Effect: Focused Image in Full Color and Bigger */
+/* Hover Effect: Focused Image Moves Up */
+.portfolio-item img:hover {
+    transform: translateY(-5px); /* Move the hovered image up slightly */
+    filter: grayscale(0%); /* Restore full color */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add prominent shadow */
+}
+
+/* Non-hovered images remain black & white */
+.container_porto:hover .portfolio-item img:not(:hover) {
+    filter: grayscale(100%); /* Ensure non-hovered images stay black & white */
+    transform: translateY(0); /* Non-hovered images stay in place */
+}
+
+/* Keyframe for Seamless Scrolling */
+@keyframes scroll-seamless {
+    0% {
+        transform: translateX(0); /* Start from the initial position */
+    }
+    100% {
+        transform: translateX(-50%); /* Move gallery left by 50% of its width */
+    }
+}
+
+.back-button {
+    margin: 60px 0; /* Space between the button and other content */
+    text-align: center; /* Center align the button */
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.back-button a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Service */
+
+#services {
+    text-align: center;
+    padding: 20px;
+}
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.service-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.service-item {
+    flex: 1;
+    max-width: 45%;
+}
+.service-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.service-img:hover {
+    transform: scale(1.01);
+}
+
+/* Separator (Garis Putus-Putus) */
+.separator {
+    height: 4px;
+    width: 80%;
+    margin: 20px auto;
+    border-top: 4px dashed #b08968;
+    animation: dashMove 2s infinite alternate;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 28px; /* Adjust title size for smaller screens */
+    }
+
+    .service-row {
+        flex-direction: column; /* Stack services vertically on smaller screens */
+        gap: 15px; /* Reduce gap between items */
+    }
+
+    .service-item {
+        flex: none; /* Allow items to take up full width on small screens */
+        min-width: 100%; /* Ensure items span the entire width */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .service-item h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .service-item p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .separator {
+        width: 90%; /* Make the separator a bit smaller */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 24px; /* Adjust title size further for very small screens */
+    }
+
+    .service-item {
+        padding: 10px; /* Reduce padding even more */
+    }
+
+    .service-item h2 {
+        font-size: 18px; /* Adjust heading size further */
+    }
+
+    .service-item p {
+        font-size: 12px; /* Adjust paragraph size further */
+    }
+
+    .separator {
+        width: 95%; /* Adjust separator width */
+    }
+}
+
+
+
+/* Full-Screen Container */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;  /* Center the container horizontally */
+    height: 100vh; /* Make sure the container takes the full viewport height */
+}
+
+.contact-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    animation: bounceIn 2s ease-out;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-info h1 {
+        font-size: 28px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+    }
+
+    .whatsapp-button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    color: #505050;
+    text-align: center;
+    padding: 15px 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Footer Text */
+footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* Social Links Container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Makes the icons wrap to the next line on smaller screens */
+}
+
+/* Social Icon Links */
+.social-icon {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background-color: #b08968; /* Soft brown for the button */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+/* Hover Effect for Social Icons */
+.social-icon:hover {
+    background-color: #ffd700; /* Golden color on hover */
+    color: #4b3621; /* Dark brown text when hovered */
+    transform: scale(1.1); /* Make icons bigger on hover */
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Icon Style (using Bootstrap Icons) */
+.social-icon i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Icons */
+.social-icon:hover i {
+    transform: rotate(360deg); /* Make the icon rotate on hover */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 20px 10px;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
